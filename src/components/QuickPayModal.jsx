@@ -131,7 +131,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
         <div className="px-6 py-5 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="p-2 bg-white/10 rounded-xl backdrop-blur-md">
-              <Send className="w-5 h-5 text-orange-400" />
+              <Send className="w-5 h-5 text-sky-400" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg tracking-tight">Pay via UPI & Add Note 💸</h3>
@@ -161,7 +161,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   onClick={() => handleSelectRecipient(r)}
                   className={`text-xs font-semibold px-2.5 py-1.5 rounded-xl border transition-all ${
                     accountHolder === r.accountHolder
-                      ? 'bg-orange-500 text-white border-orange-500 shadow-sm'
+                      ? 'bg-sky-500 text-white border-sky-500 shadow-sm'
                       : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border-slate-200'
                   }`}
                 >
@@ -179,7 +179,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   value={accountHolder}
                   onChange={(e) => setAccountHolder(e.target.value)}
                   placeholder="Account Holder Name (e.g. BALAJI FUELS & SERVICE)"
-                  className="w-full text-xs font-mono pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50"
+                  className="w-full text-xs font-mono pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50"
                   required
                 />
               </div>
@@ -192,7 +192,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   value={upiId}
                   onChange={(e) => setUpiId(e.target.value)}
                   placeholder="UPI ID (e.g. balajifuels@okhdfcbank)"
-                  className="w-full text-xs font-mono pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50"
+                  className="w-full text-xs font-mono pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50"
                   required
                 />
               </div>
@@ -212,18 +212,18 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="200"
                 min="1"
-                className="w-full text-xl font-black pl-8 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50 text-slate-800"
+                className="w-full text-xl font-black pl-8 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50 text-slate-800"
                 required
               />
             </div>
           </div>
 
           {/* Feature: What are we doing this transaction for? */}
-          <div className="p-4 rounded-2xl bg-orange-50/60 border border-orange-200/80 space-y-3">
+          <div className="p-4 rounded-2xl bg-sky-50/70 border border-sky-200/80 space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
-                <Tag className="w-4 h-4 text-orange-600" />
-                <span className="text-xs font-extrabold uppercase tracking-wide text-orange-950">
+                <Tag className="w-4 h-4 text-sky-600" />
+                <span className="text-xs font-extrabold uppercase tracking-wide text-sky-950">
                   Transaction Purpose Note
                 </span>
               </div>
@@ -234,7 +234,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   type="checkbox"
                   checked={addNoteLater}
                   onChange={(e) => setAddNoteLater(e.target.checked)}
-                  className="rounded text-orange-600 focus:ring-orange-500"
+                  className="rounded text-orange-600 focus:ring-sky-400"
                 />
                 <span>Add note after payment</span>
               </label>
@@ -250,7 +250,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                       onClick={() => handleSelectChip(chip)}
                       className={`text-xs font-medium px-2 py-1 rounded-lg border transition-all ${
                         note === chip.label
-                          ? 'bg-orange-600 text-white border-orange-600'
+                          ? 'bg-sky-500 text-white border-sky-500'
                           : 'bg-white text-slate-700 hover:bg-slate-50 border-slate-200'
                       }`}
                     >
@@ -264,7 +264,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
                   placeholder="e.g. Petrol bunk, canteen chai, physics xerox..."
-                  className="w-full text-xs px-3 py-2 rounded-xl border border-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                  className="w-full text-xs px-3 py-2 rounded-xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-white"
                   required={!addNoteLater}
                 />
               </div>
@@ -296,7 +296,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
             type="submit"
             className="w-full py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 active:scale-[0.99] text-white font-extrabold text-sm shadow-xl shadow-slate-900/20 flex items-center justify-center gap-2 transition-all"
           >
-            <Send className="w-4 h-4 text-orange-400" />
+            <Send className="w-4 h-4 text-sky-400" />
             <span>Complete UPI Payment of ₹{amount}</span>
           </button>
 

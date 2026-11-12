@@ -41,7 +41,7 @@ export default function OverviewCards({
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
       
       {/* Card 1: Monthly Money Spent */}
-      <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
+      <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
             Monthly Spend
@@ -49,12 +49,12 @@ export default function OverviewCards({
           <div className="flex items-center gap-2">
             <button
               onClick={onOpenBudgetModal}
-              className="text-[11px] font-bold text-orange-600 hover:text-orange-700 bg-orange-50 hover:bg-orange-100 px-2.5 py-1 rounded-xl transition-colors"
+              className="text-[11px] font-bold text-sky-700 hover:text-sky-800 bg-sky-50 hover:bg-sky-100 border border-sky-200/60 px-2.5 py-1 rounded-xl transition-colors"
               title="Set or change your monthly spending limit"
             >
               Set Limit ⚙️
             </button>
-            <div className="w-10 h-10 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center font-bold shadow-sm">
+            <div className="w-10 h-10 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold shadow-sm">
               <Wallet className="w-5 h-5" />
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function OverviewCards({
                   ? 'bg-rose-500' 
                   : percentSpent > 70 
                     ? 'bg-amber-500' 
-                    : 'bg-gradient-to-r from-orange-500 to-amber-400'
+                    : 'bg-gradient-to-r from-sky-400 to-sky-500'
               }`}
               style={{ width: `${percentSpent}%` }}
             />
@@ -102,7 +102,7 @@ export default function OverviewCards({
       </div>
 
       {/* Card 2: Average Spendings */}
-      <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
+      <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
             Average Spendings
@@ -137,7 +137,7 @@ export default function OverviewCards({
       </div>
 
       {/* Card 3: Splitz Net Position */}
-      <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
+      <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden group">
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
             Splitz Balance
@@ -176,7 +176,7 @@ export default function OverviewCards({
       {/* Card 4: Financial Health Score & Limit with Emojis */}
       <div 
         onClick={onOpenBudgetModal}
-        className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden cursor-pointer group"
+        className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all relative overflow-hidden cursor-pointer group"
       >
         <div className="flex items-center justify-between mb-3">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">

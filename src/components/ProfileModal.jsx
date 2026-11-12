@@ -92,14 +92,14 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
       <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200 flex flex-col max-h-[92vh]">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center justify-between shrink-0">
+        <div className="px-6 py-5 bg-gradient-to-r from-sky-500 to-sky-400 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2.5">
             <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
               <User className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg tracking-tight">Edit Student Profile</h3>
-              <p className="text-xs text-orange-100">Personalize your name, photo, college & UPI</p>
+              <p className="text-xs text-sky-100">Personalize your name, photo, college & UPI</p>
             </div>
           </div>
           <button 
@@ -119,7 +119,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
               <img 
                 src={avatar} 
                 alt="Profile Preview" 
-                className="w-24 h-24 rounded-3xl object-cover ring-4 ring-orange-500/20 shadow-lg group-hover:opacity-90 transition-all"
+                className="w-24 h-24 rounded-3xl object-cover ring-4 ring-sky-400/25 shadow-lg group-hover:opacity-90 transition-all"
               />
               <button
                 type="button"
@@ -149,7 +149,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                     onClick={() => setAvatar(preset.url)}
                     className={`w-8 h-8 rounded-xl overflow-hidden transition-all ${
                       avatar === preset.url 
-                        ? 'ring-2 ring-orange-500 scale-110 shadow-sm' 
+                        ? 'ring-2 ring-sky-500 scale-110 shadow-sm' 
                         : 'opacity-70 hover:opacity-100 hover:scale-105'
                     }`}
                     title={preset.label}
@@ -164,7 +164,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="inline-flex items-center gap-1 text-slate-600 hover:text-orange-600 font-semibold transition-colors"
+                  className="inline-flex items-center gap-1 text-slate-600 hover:text-sky-600 font-semibold transition-colors"
                 >
                   <Upload className="w-3.5 h-3.5" />
                   <span>Upload from Device</span>
@@ -173,7 +173,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                 <button
                   type="button"
                   onClick={() => setShowUrlInput(!showUrlInput)}
-                  className="inline-flex items-center gap-1 text-slate-600 hover:text-orange-600 font-semibold transition-colors"
+                  className="inline-flex items-center gap-1 text-slate-600 hover:text-sky-600 font-semibold transition-colors"
                 >
                   <LinkIcon className="w-3.5 h-3.5" />
                   <span>Image URL</span>
@@ -188,12 +188,12 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                     value={customUrl}
                     onChange={(e) => setCustomUrl(e.target.value)}
                     placeholder="https://example.com/photo.jpg"
-                    className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 flex-1 bg-slate-50"
+                    className="text-xs px-3 py-1.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 flex-1 bg-slate-50"
                   />
                   <button
                     type="button"
                     onClick={handleApplyCustomUrl}
-                    className="px-3 py-1.5 rounded-xl bg-orange-500 text-white font-bold text-xs hover:bg-orange-600 transition-colors"
+                    className="px-3 py-1.5 rounded-xl bg-sky-500 text-white font-bold text-xs hover:bg-sky-600 transition-colors"
                   >
                     Set
                   </button>
@@ -220,7 +220,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Aarav Sharma"
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-white transition-all"
                 />
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                   value={college}
                   onChange={(e) => setCollege(e.target.value)}
                   placeholder="e.g. BITS Pilani • CS '27"
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-white transition-all"
                 />
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                   value={upiId}
                   onChange={(e) => setUpiId(e.target.value)}
                   placeholder="e.g. aarav.sharma@okhdfcbank"
-                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-mono font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-white transition-all"
                 />
               </div>
               <p className="text-[11px] text-slate-400 mt-1">
@@ -282,7 +282,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98765 43210"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -302,7 +302,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
                     value={monthlyLimit}
                     onChange={(e) => setMonthlyLimit(e.target.value)}
                     placeholder="12000"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
+                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:bg-white transition-all"
                   />
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function ProfileModal({ isOpen, onClose, user, onUpdateUser }) {
             <button
               type="submit"
               disabled={savedSuccess}
-              className="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-bold text-xs shadow-md shadow-orange-500/25 transition-all flex items-center gap-1.5"
+              className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs shadow-md shadow-sky-400/25 transition-all flex items-center gap-1.5"
             >
               {savedSuccess ? (
                 <>

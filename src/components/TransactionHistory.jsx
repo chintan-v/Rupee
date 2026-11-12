@@ -83,7 +83,7 @@ export default function TransactionHistory({
   };
 
   return (
-    <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card mb-6">
+    <div className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card mb-6">
       
       {/* Header and Controls */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
@@ -111,7 +111,7 @@ export default function TransactionHistory({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by Account Holder, UPI ID, Note..."
-              className="text-xs pl-9 pr-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 w-52 sm:w-72 bg-slate-50/50"
+              className="text-xs pl-9 pr-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 w-52 sm:w-72 bg-slate-50/50"
             />
           </div>
 
@@ -143,7 +143,7 @@ export default function TransactionHistory({
           {/* Add Manual Payment Button */}
           <button
             onClick={onAddNewPayment}
-            className="flex items-center gap-1 px-3 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold transition-all shadow-sm"
+            className="flex items-center gap-1 px-3 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-md shadow-sky-400/20"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Pay & Tag</span>
@@ -199,7 +199,7 @@ export default function TransactionHistory({
                             </h4>
                             <span 
                               onClick={() => handleStartEdit(tx)}
-                              className="text-[10px] text-slate-400 hover:text-orange-600 font-bold underline cursor-pointer"
+                              className="text-[10px] text-slate-400 hover:text-sky-600 font-bold underline cursor-pointer"
                             >
                               Edit Note
                             </span>
@@ -236,9 +236,9 @@ export default function TransactionHistory({
 
                       {/* Note display or Inline Editor */}
                       {isEditing ? (
-                        <div className="mt-3 p-3 bg-white rounded-2xl border-2 border-orange-300 shadow-md animate-in fade-in space-y-2">
+                        <div className="mt-3 p-3 bg-white rounded-2xl border-2 border-sky-300 shadow-md animate-in fade-in space-y-2">
                           <div className="flex items-center gap-2 text-xs text-slate-600 pb-1 border-b border-slate-100">
-                            <Info className="w-3.5 h-3.5 text-orange-500" />
+                            <Info className="w-3.5 h-3.5 text-sky-500" />
                             <span>
                               Bank details: <strong>{accountHolderName}</strong> ({upiId})
                             </span>
@@ -259,7 +259,7 @@ export default function TransactionHistory({
                                     setTempNote(chip.label);
                                     setTempCategory(chip.category);
                                   }}
-                                  className="text-[10px] font-semibold px-2 py-1 rounded-lg bg-slate-100 hover:bg-orange-50 hover:text-orange-700 border border-slate-200"
+                                  className="text-[10px] font-semibold px-2 py-1 rounded-lg bg-slate-100 hover:bg-sky-50 hover:text-sky-700 border border-slate-200"
                                 >
                                   {chip.label}
                                 </button>
@@ -271,7 +271,7 @@ export default function TransactionHistory({
                               value={tempNote}
                               onChange={(e) => setTempNote(e.target.value)}
                               placeholder="Type purpose, e.g. Petrol bunk..."
-                              className="text-xs px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-orange-500 w-full bg-slate-50/50"
+                              className="text-xs px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-400 w-full bg-slate-50/50"
                               autoFocus
                               onKeyDown={(e) => {
                                 if (e.key === 'Enter') handleSaveNote(tx.id);
@@ -289,7 +289,7 @@ export default function TransactionHistory({
                             </button>
                             <button
                               onClick={() => handleSaveNote(tx.id)}
-                              className="text-xs px-3.5 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold shadow-sm"
+                              className="text-xs px-3.5 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold shadow-sm"
                             >
                               Save Note & Categorize
                             </button>

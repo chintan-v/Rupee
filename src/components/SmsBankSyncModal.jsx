@@ -57,14 +57,14 @@ export default function SmsBankSyncModal({ isOpen, onClose, smsList, onImportSms
       <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center justify-between">
+        <div className="px-6 py-5 bg-gradient-to-r from-sky-500 to-sky-400 text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
               <Smartphone className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg tracking-tight">Direct SMS & Bank Sync 📩</h3>
-              <p className="text-xs text-orange-100">Auto-fetches debit alerts directly when app is standalone</p>
+              <p className="text-xs text-sky-100">Auto-fetches debit alerts directly when app is standalone</p>
             </div>
           </div>
           <button 
@@ -78,15 +78,15 @@ export default function SmsBankSyncModal({ isOpen, onClose, smsList, onImportSms
         <div className="p-6 space-y-4">
           
           {/* Status Bar */}
-          <div className="flex items-center justify-between p-3 rounded-2xl bg-orange-50 border border-orange-200 text-xs">
+          <div className="flex items-center justify-between p-3 rounded-2xl bg-sky-50 border border-sky-200 text-xs">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="font-bold text-orange-950">SMS Reader Service Running</span>
+              <span className="font-bold text-sky-950">SMS Reader Service Running</span>
             </div>
             <button
               onClick={handleSimulateNewSms}
               disabled={syncing}
-              className="flex items-center gap-1 text-[11px] font-bold text-orange-700 hover:text-orange-900 bg-white px-2.5 py-1 rounded-xl border border-orange-200 shadow-sm"
+              className="flex items-center gap-1 text-[11px] font-bold text-sky-700 hover:text-sky-900 bg-white px-2.5 py-1 rounded-xl border border-sky-200 shadow-sm"
             >
               <RefreshCw className={`w-3 h-3 ${syncing ? 'animate-spin' : ''}`} />
               <span>Simulate New Bank SMS</span>
@@ -109,12 +109,12 @@ export default function SmsBankSyncModal({ isOpen, onClose, smsList, onImportSms
               localSmsList.map((sms) => (
                 <div 
                   key={sms.id}
-                  className="p-3.5 rounded-2xl border border-slate-200 hover:border-orange-400 bg-white shadow-sm space-y-2 transition-all"
+                  className="p-3.5 rounded-2xl border border-slate-200 hover:border-sky-400 bg-white shadow-sm space-y-2 transition-all"
                 >
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-[11px] font-extrabold px-2 py-0.5 rounded-lg bg-orange-100 text-orange-800">
+                        <span className="text-[11px] font-extrabold px-2 py-0.5 rounded-lg bg-sky-100 text-sky-800">
                           {sms.bank}
                         </span>
                         <span className="text-[10px] text-slate-400 font-semibold">{sms.detectedTime}</span>
@@ -141,7 +141,7 @@ export default function SmsBankSyncModal({ isOpen, onClose, smsList, onImportSms
 
                     <button
                       onClick={() => handleImport(sms)}
-                      className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-sm transition-all active:scale-95"
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs shadow-md shadow-sky-400/20 transition-all active:scale-95"
                     >
                       <Download className="w-3 h-3" />
                       <span>Import & Tag</span>
