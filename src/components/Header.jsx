@@ -24,7 +24,7 @@ export default function Header({
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-200/80 px-6 py-4">
+    <header className="sticky top-0 z-30 bg-[#FDFCF9]/90 backdrop-blur-md border-b border-[#EBE4D5] px-6 py-4">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         
         {/* Left: Greeting & Date */}
@@ -44,7 +44,7 @@ export default function Header({
           {/* Quick Splitz Button */}
           <button
             onClick={onOpenSplitz}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 active:scale-95 text-white font-semibold text-xs shadow-md shadow-orange-500/25 transition-all"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 active:scale-95 text-white font-semibold text-xs shadow-md shadow-sky-400/25 transition-all"
           >
             <Receipt className="w-4 h-4" />
             <span>Splitz</span>
@@ -53,7 +53,7 @@ export default function Header({
           {/* New UPI Payment Button */}
           <button
             onClick={onOpenQuickPay}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 active:scale-95 text-white font-semibold text-xs shadow-md shadow-slate-900/20 transition-all"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 text-white font-semibold text-xs shadow-md shadow-slate-900/20 transition-all"
           >
             <Plus className="w-4 h-4" />
             <span>Pay & Add Note</span>
@@ -62,7 +62,7 @@ export default function Header({
           {/* SMS / Bank Sync Button */}
           <button
             onClick={onOpenSmsSync}
-            className="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-100 border border-slate-200 relative transition-colors"
+            className="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-100 border border-[#EBE4D5] relative transition-colors"
             title="Auto-fetch from Bank SMS"
           >
             <Smartphone className="w-4 h-4" />
@@ -89,7 +89,7 @@ export default function Header({
               <div className="absolute right-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-slate-200 p-3 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                 <div className="flex items-center justify-between pb-2 border-b border-slate-100 mb-2">
                   <span className="text-xs font-bold text-slate-700 uppercase tracking-wide">Campus Reminders</span>
-                  <span className="text-[10px] text-orange-600 font-semibold bg-orange-50 px-2 py-0.5 rounded-full">
+                  <span className="text-[10px] text-sky-700 font-semibold bg-sky-50 px-2 py-0.5 rounded-full">
                     {pendingNotesCount} Urgent
                   </span>
                 </div>

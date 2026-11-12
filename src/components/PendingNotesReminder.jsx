@@ -76,14 +76,14 @@ export default function PendingNotesReminder({ pendingTransactions, onUpdateNote
               value={customNote}
               onChange={(e) => setCustomNote(e.target.value)}
               placeholder="e.g. Petrol bunk..."
-              className="text-xs px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 flex-1 bg-slate-50/50"
+              className="text-xs px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 flex-1 bg-slate-50/50"
               onKeyDown={(e) => {
                 if (e.key === 'Enter') handleApplyNote(customNote);
               }}
             />
             <button
               onClick={() => handleApplyNote(customNote)}
-              className="px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold text-xs shadow-sm transition-all whitespace-nowrap"
+              className="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs shadow-md shadow-sky-400/20 transition-all whitespace-nowrap"
             >
               Save Note
             </button>
@@ -96,7 +96,7 @@ export default function PendingNotesReminder({ pendingTransactions, onUpdateNote
               <button
                 key={idx}
                 onClick={() => handleApplyNote(chip.label, chip.category)}
-                className="text-[11px] font-medium px-2 py-1 rounded-lg bg-slate-100 hover:bg-orange-50 hover:text-orange-700 hover:border-orange-200 text-slate-700 border border-slate-200/60 transition-colors"
+                className="text-[11px] font-medium px-2 py-1 rounded-lg bg-slate-100 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-200 text-slate-700 border border-slate-200/60 transition-colors"
               >
                 {chip.label}
               </button>
@@ -110,7 +110,7 @@ export default function PendingNotesReminder({ pendingTransactions, onUpdateNote
       {pendingTransactions.length > 1 && (
         <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
           <span>{pendingTransactions.length} transactions pending note tagging</span>
-          <span className="text-orange-600 font-medium">Tag them to keep your monthly analytics accurate</span>
+          <span className="text-sky-600 font-medium">Tag them to keep your monthly analytics accurate</span>
         </div>
       )}
     </div>

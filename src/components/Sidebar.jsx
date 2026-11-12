@@ -74,7 +74,7 @@ export default function Sidebar({
 
   return (
     <aside 
-      className={`fixed top-0 left-0 z-40 h-screen transition-all duration-300 ease-in-out bg-white border-r border-slate-200 flex flex-col justify-between select-none ${
+      className={`fixed top-0 left-0 z-40 h-screen transition-all duration-300 ease-in-out bg-[#FDFCF9] border-r border-[#EBE4D5] flex flex-col justify-between select-none ${
         isExpanded ? 'w-64' : 'w-20'
       }`}
     >
@@ -82,16 +82,16 @@ export default function Sidebar({
       <div className="flex-1 flex flex-col min-h-0">
         
         {/* Header Bar */}
-        <div className="h-20 border-b border-slate-100 shrink-0 relative flex items-center px-4">
+        <div className="h-20 border-b border-[#EBE4D5] shrink-0 relative flex items-center px-4">
           {isExpanded ? (
             <div className="w-full flex items-center justify-between">
               <div className="flex items-center gap-3 overflow-hidden">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center text-white shadow-md shadow-orange-500/20 shrink-0 font-bold text-lg select-none">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-400 to-sky-500 flex items-center justify-center text-white shadow-md shadow-sky-400/25 shrink-0 font-bold text-lg select-none">
                   ₹
                 </div>
                 <div className="flex flex-col transition-opacity duration-200">
                   <span className="font-extrabold text-xl tracking-tight text-slate-800 flex items-center gap-1">
-                    RupRad <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full bg-orange-100 text-orange-600">Beta</span>
+                    RupRad <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded-full bg-sky-100 text-sky-700">Beta</span>
                   </span>
                   <span className="text-xs text-slate-400 font-medium">Student Spend & Split</span>
                 </div>
@@ -110,7 +110,7 @@ export default function Sidebar({
             <div className="w-full flex items-center justify-center relative">
               <div 
                 onClick={() => setIsExpanded(true)}
-                className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center text-white shadow-md shadow-orange-500/20 shrink-0 font-bold text-lg cursor-pointer hover:scale-105 transition-transform select-none"
+                className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-400 to-sky-500 flex items-center justify-center text-white shadow-md shadow-sky-400/25 shrink-0 font-bold text-lg cursor-pointer hover:scale-105 transition-transform select-none"
                 title="Click to expand sidebar"
               >
                 ₹
@@ -119,7 +119,7 @@ export default function Sidebar({
               <button
                 onClick={() => setIsExpanded(true)}
                 title="Expand Sidebar"
-                className="absolute -right-6 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white border border-slate-200 shadow-sm flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all z-50 focus:outline-none"
+                className="absolute -right-6 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white border border-[#EBE4D5] shadow-sm flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all z-50 focus:outline-none"
               >
                 <ChevronRight className="w-3.5 h-3.5" />
               </button>
@@ -141,7 +141,7 @@ export default function Sidebar({
                   onClick={() => setActiveTab(item.id)}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-2xl font-medium text-sm transition-all duration-150 relative group ${
                     isActive 
-                      ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg shadow-orange-500/25 font-semibold' 
+                      ? 'bg-sky-500 text-white shadow-md shadow-sky-400/25 font-semibold' 
                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                   }`}
                 >
@@ -294,29 +294,29 @@ export default function Sidebar({
       </div>
 
       {/* Bottom Profile & Student Campus Badge */}
-      <div className="p-3 border-t border-slate-100 bg-slate-50/50 shrink-0">
+      <div className="p-3 border-t border-[#EBE4D5] bg-[#F7F4EE]/50 shrink-0">
         {isExpanded ? (
           <button 
             onClick={onOpenProfile}
             title="Edit Profile (Name, Photo, UPI)"
-            className="w-full p-2.5 rounded-2xl bg-white border border-slate-200 hover:border-orange-300 hover:bg-orange-50/40 shadow-sm flex items-center gap-2.5 transition-all text-left group cursor-pointer"
+            className="w-full p-2.5 rounded-2xl bg-white border border-slate-200 hover:border-sky-300 hover:bg-sky-50/40 shadow-sm flex items-center gap-2.5 transition-all text-left group cursor-pointer"
           >
             <div className="relative shrink-0">
               <img 
                 src={user?.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80"} 
                 alt="Avatar" 
-                className="w-9 h-9 rounded-xl object-cover ring-2 ring-orange-500/30 group-hover:ring-orange-500 transition-all" 
+                className="w-9 h-9 rounded-xl object-cover ring-2 ring-sky-400/30 group-hover:ring-sky-400 transition-all" 
               />
-              <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-orange-500 rounded-full border-2 border-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-sky-500 rounded-full border-2 border-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Edit3 className="w-2 h-2 text-white" />
               </span>
             </div>
             <div className="flex-1 truncate">
               <div className="flex items-center justify-between">
-                <p className="text-xs font-bold text-slate-800 group-hover:text-orange-600 truncate transition-colors">
+                <p className="text-xs font-bold text-slate-800 group-hover:text-sky-600 truncate transition-colors">
                   {user?.name || "Aarav Sharma"}
                 </p>
-                <span className="text-[10px] text-orange-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-[10px] text-sky-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
                   Edit
                 </span>
               </div>
@@ -335,7 +335,7 @@ export default function Sidebar({
             <img 
               src={user?.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80"} 
               alt="Avatar" 
-              className="w-8 h-8 rounded-xl object-cover ring-2 ring-orange-500/30 group-hover:ring-orange-500 group-hover:scale-105 transition-all shadow-sm" 
+              className="w-8 h-8 rounded-xl object-cover ring-2 ring-sky-400/30 group-hover:ring-sky-400 group-hover:scale-105 transition-all shadow-sm" 
             />
           </button>
         )}

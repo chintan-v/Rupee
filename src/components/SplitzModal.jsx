@@ -97,14 +97,14 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
       <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-orange-500 to-amber-500 text-white flex items-center justify-between">
+        <div className="px-6 py-5 bg-gradient-to-r from-sky-500 to-sky-400 text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
               <Receipt className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg tracking-tight">Splitz ⚡</h3>
-              <p className="text-xs text-orange-100">Select title • Enter amount • Add friends</p>
+              <p className="text-xs text-sky-100">Select title • Enter amount • Add friends</p>
             </div>
           </div>
           <button 
@@ -132,7 +132,7 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
                   onClick={() => handleSelectPreset(p)}
                   className={`text-xs font-semibold px-2.5 py-1.5 rounded-xl border transition-all ${
                     title === p.title 
-                      ? 'bg-orange-500 text-white border-orange-500 shadow-sm' 
+                      ? 'bg-sky-500 text-white border-sky-500 shadow-sm' 
                       : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border-slate-200'
                   }`}
                 >
@@ -146,7 +146,7 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Or type title, e.g. Friday Cafe bill"
-              className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50"
+              className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50"
               required
             />
           </div>
@@ -165,7 +165,7 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
                   onChange={(e) => setTotalAmount(e.target.value)}
                   placeholder="e.g. 900"
                   min="1"
-                  className="w-full text-base font-extrabold pl-8 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50 text-slate-800"
+                  className="w-full text-base font-extrabold pl-8 pr-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50 text-slate-800"
                   required
                 />
               </div>
@@ -180,7 +180,7 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
                 value={merchant}
                 onChange={(e) => setMerchant(e.target.value)}
                 placeholder="e.g. CCD Campus"
-                className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50/50"
+                className="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-slate-50/50"
               />
             </div>
           </div>
@@ -191,15 +191,15 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-500">
                 Splitting with ({totalParticipants} friends including you)
               </label>
-              <span className="text-xs font-extrabold text-orange-600 bg-orange-50 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-extrabold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full">
                 ₹{splitShare} each
               </span>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
               {/* You (Locked) */}
-              <div className="flex items-center gap-2 p-2 rounded-xl bg-orange-50 border border-orange-200 text-xs font-bold text-orange-800">
-                <div className="w-6 h-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-[10px]">
+              <div className="flex items-center gap-2 p-2 rounded-xl bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
+                <div className="w-6 h-6 rounded-full bg-sky-500 text-white flex items-center justify-center text-[10px]">
                   ✓
                 </div>
                 <span>You (Aarav)</span>
@@ -248,7 +248,7 @@ export default function SplitzModal({ isOpen, onClose, friends, onCreateSplit })
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 active:scale-[0.99] text-white font-extrabold text-sm shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2 transition-all"
+            className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 active:scale-[0.99] text-white font-extrabold text-sm shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2 transition-all"
           >
             <span>Create Splitz & Send WhatsApp Links</span>
             <ArrowRight className="w-4 h-4" />
