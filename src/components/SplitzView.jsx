@@ -59,7 +59,7 @@ export default function SplitzView({
     <div className="space-y-6">
       
       {/* Top Banner & Tab Navigation */}
-      <div className="bg-gradient-to-r from-sky-500 via-sky-400 to-blue-400 rounded-3xl p-6 text-white shadow-lg shadow-sky-400/20 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-6 text-white shadow-lg shadow-orange-500/20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -71,14 +71,14 @@ export default function SplitzView({
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
               Splitz Hub & Campus Accounts
             </h2>
-            <p className="text-xs md:text-sm text-sky-100 max-w-xl mt-1">
+            <p className="text-xs md:text-sm text-orange-100 max-w-xl mt-1">
               Never chase hostel friends for movie tickets or canteen snacks. Instant WhatsApp payment pings with linked UPI.
             </p>
           </div>
 
           <button
             onClick={onOpenCreateSplitModal}
-            className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-sky-700 hover:bg-sky-50 active:scale-95 font-extrabold text-sm shadow-xl shadow-black/10 transition-all self-start md:self-auto shrink-0"
+            className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-orange-600 hover:bg-orange-50 active:scale-95 font-extrabold text-sm shadow-xl shadow-black/10 transition-all self-start md:self-auto shrink-0"
           >
             <Plus className="w-4 h-4" />
             <span>New Splitz</span>
@@ -91,7 +91,7 @@ export default function SplitzView({
             onClick={() => setActiveTab('my-splits')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'my-splits'
-                ? 'bg-white text-sky-700 shadow-md'
+                ? 'bg-white text-orange-600 shadow-md'
                 : 'text-white/80 hover:bg-white/10'
             }`}
           >
@@ -101,12 +101,12 @@ export default function SplitzView({
             onClick={() => setActiveTab('invited')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
               activeTab === 'invited'
-                ? 'bg-white text-sky-700 shadow-md'
+                ? 'bg-white text-orange-600 shadow-md'
                 : 'text-white/80 hover:bg-white/10'
             }`}
           >
             <span>Invited by Friends</span>
-            <span className="px-1.5 py-0.2 rounded-full bg-sky-700 text-[10px] text-white">
+            <span className="px-1.5 py-0.2 rounded-full bg-orange-700 text-[10px] text-white">
               {invitedSplits.length}
             </span>
           </button>
@@ -124,7 +124,7 @@ export default function SplitzView({
             return (
               <div 
                 key={split.id}
-                className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all flex flex-col justify-between"
+                className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all flex flex-col justify-between"
               >
                 <div>
                   {/* Split Title & Status Badges */}
@@ -195,7 +195,7 @@ export default function SplitzView({
                           className="flex items-center justify-between p-2.5 rounded-2xl bg-slate-50 border border-slate-100"
                         >
                           <div className="flex items-center gap-2.5">
-                            <div className="w-8 h-8 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-xs">
+                            <div className="w-8 h-8 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center font-bold text-xs">
                               {p.name.charAt(0)}
                             </div>
                             <div>
@@ -280,7 +280,7 @@ export default function SplitzView({
             return (
               <div 
                 key={inv.id}
-                className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card hover:shadow-lg transition-all"
+                className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div>

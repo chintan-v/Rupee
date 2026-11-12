@@ -95,7 +95,7 @@ export default function BudgetScoreView({
     <div className="space-y-6">
       
       {/* Top Banner - Brand Orange Theme (No extra score box inside banner) */}
-      <div className="bg-gradient-to-r from-sky-500 via-sky-400 to-blue-400 rounded-3xl p-6 text-white shadow-xl shadow-sky-400/20 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -107,7 +107,7 @@ export default function BudgetScoreView({
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
               Monthly Limit & Discipline Score
             </h2>
-            <p className="text-xs md:text-sm text-sky-100 max-w-2xl mt-1">
+            <p className="text-xs md:text-sm text-orange-100 max-w-2xl mt-1">
               Set your target allowance ceiling, configure spend reminders, and track your campus discipline score.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function BudgetScoreView({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
         {/* Left Column: Emoji Score Meter Card */}
-        <div className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card flex flex-col justify-between">
+        <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
               <div>
@@ -171,10 +171,10 @@ export default function BudgetScoreView({
 
                 {/* Positive */}
                 <div className={`p-3 rounded-2xl border text-center transition-all ${
-                  previewScore >= 70 ? 'bg-sky-50 border-sky-300 ring-2 ring-sky-400/30' : 'bg-slate-50 border-slate-200'
+                  previewScore >= 70 ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400/30' : 'bg-slate-50 border-slate-200'
                 }`}>
                   <span className="text-xl">🌟</span>
-                  <span className="text-xs font-extrabold block text-sky-700 mt-1">Healthy</span>
+                  <span className="text-xs font-extrabold block text-orange-700 mt-1">Healthy</span>
                   <span className="text-[10px] text-slate-400">70 - 100 pts</span>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function BudgetScoreView({
         </div>
 
         {/* Right Column: Direct Option to Set Limit */}
-        <div className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card flex flex-col justify-between">
+        <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card flex flex-col justify-between">
           <div className="space-y-5">
             <div>
               <h3 className="text-lg font-extrabold text-slate-800 tracking-tight">
@@ -200,8 +200,8 @@ export default function BudgetScoreView({
             </div>
 
             {/* Direct Number Input Field without leading zero bug */}
-            <div className="p-4 rounded-2xl bg-sky-50/70 border border-sky-200/80 space-y-3">
-              <span className="text-xs font-bold text-sky-950 uppercase tracking-wider block">
+            <div className="p-4 rounded-2xl bg-orange-50/60 border border-orange-200/80 space-y-3">
+              <span className="text-xs font-bold text-orange-950 uppercase tracking-wider block">
                 Target Monthly Limit (₹)
               </span>
 
@@ -229,7 +229,7 @@ export default function BudgetScoreView({
                     }
                   }}
                   placeholder="e.g. 10000"
-                  className="w-full text-2xl font-black pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-400 bg-white text-slate-800"
+                  className="w-full text-2xl font-black pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white text-slate-800"
                 />
               </div>
 
@@ -243,7 +243,7 @@ export default function BudgetScoreView({
                     onClick={() => setSliderLimit(preset)}
                     className={`text-xs font-bold px-2.5 py-1 rounded-xl border transition-all ${
                       numericLimit === preset
-                        ? 'bg-sky-500 text-white border-sky-500 shadow-sm'
+                        ? 'bg-orange-500 text-white border-orange-500 shadow-sm'
                         : 'bg-white text-slate-700 hover:bg-slate-100 border-slate-200'
                     }`}
                   >
@@ -262,7 +262,7 @@ export default function BudgetScoreView({
                 step="500"
                 value={numericLimit}
                 onChange={(e) => setSliderLimit(Number(e.target.value))}
-                className="w-full accent-sky-500 h-2 bg-slate-200 rounded-lg cursor-pointer"
+                className="w-full accent-orange-500 h-2 bg-slate-200 rounded-lg cursor-pointer"
               />
 
               <div className="flex justify-between text-[11px] font-semibold text-slate-400">
@@ -280,7 +280,7 @@ export default function BudgetScoreView({
 
               <label className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer hover:bg-slate-100/70 transition-colors">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-xl bg-sky-100 text-sky-700">
+                  <div className="p-1.5 rounded-xl bg-orange-100 text-orange-700">
                     <Bell className="w-4 h-4" />
                   </div>
                   <div>
@@ -292,7 +292,7 @@ export default function BudgetScoreView({
                   type="checkbox"
                   checked={reminderAt80}
                   onChange={(e) => setReminderAt80(e.target.checked)}
-                  className="rounded text-sky-500 focus:ring-sky-400 w-4 h-4 accent-sky-500"
+                  className="rounded text-orange-500 focus:ring-orange-500 w-4 h-4 accent-orange-500"
                 />
               </label>
 
@@ -310,7 +310,7 @@ export default function BudgetScoreView({
                   type="checkbox"
                   checked={reminderDailyOverspend}
                   onChange={(e) => setReminderDailyOverspend(e.target.checked)}
-                  className="rounded text-sky-500 focus:ring-sky-400 w-4 h-4 accent-sky-500"
+                  className="rounded text-orange-500 focus:ring-orange-500 w-4 h-4 accent-orange-500"
                 />
               </label>
             </div>
@@ -320,7 +320,7 @@ export default function BudgetScoreView({
           <div className="pt-4">
             <button
               onClick={handleSave}
-              className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 active:scale-[0.99] text-white font-extrabold text-sm shadow-lg shadow-sky-400/25 flex items-center justify-center gap-2 transition-all"
+              className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 active:scale-[0.99] text-white font-extrabold text-sm shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2 transition-all"
             >
               {savedSuccess ? (
                 <>

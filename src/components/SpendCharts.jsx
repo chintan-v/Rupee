@@ -45,7 +45,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
       
       {/* 2 Cols: Weekly Spending Trend */}
-      <div className="lg:col-span-2 bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card">
+      <div className="lg:col-span-2 bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
           <div>
             <div className="flex items-center gap-2">
@@ -128,7 +128,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
                 {/* Stacked Bar with smooth transitions */}
                 <div 
                   className={`w-full max-w-[38px] rounded-xl overflow-hidden flex flex-col-reverse transition-all duration-300 ${
-                    isHovered ? 'scale-105 shadow-md shadow-sky-400/20 ring-2 ring-sky-400' : ''
+                    isHovered ? 'scale-105 shadow-md shadow-orange-500/20 ring-2 ring-orange-400' : ''
                   }`}
                   style={{ height: `${Math.max(12, totalH)}%` }}
                 >
@@ -154,7 +154,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
 
                 {/* Day label */}
                 <span className={`text-[11px] font-bold mt-3 transition-colors ${
-                  item.day.includes('Today') ? 'text-sky-600' : isHovered ? 'text-slate-900' : 'text-slate-400'
+                  item.day.includes('Today') ? 'text-orange-600' : isHovered ? 'text-slate-900' : 'text-slate-400'
                 }`}>
                   {item.day.split(' ')[0]}
                 </span>
@@ -169,7 +169,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
         {/* Footer Insight */}
         <div className="mt-4 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-500 gap-2">
           <div className="flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4 text-sky-500" />
+            <Sparkles className="w-4 h-4 text-orange-500" />
             <span>Friday spikes due to Weekend Movie ticket & Night Canteen treats.</span>
           </div>
           <span className="font-bold text-slate-700">Projected Month-End: ₹8,900 (Within limit)</span>
@@ -177,7 +177,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
       </div>
 
       {/* 1 Col: Smart Category Breakdown (Inspired by Image 2's Top Sellers Donut / Gauge) */}
-      <div className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card flex flex-col justify-between">
+      <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card flex flex-col justify-between">
         <div>
           <div className="flex items-center justify-between mb-4">
             <div>
@@ -186,7 +186,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
               </h3>
               <p className="text-xs text-slate-400">Where your rupees went</p>
             </div>
-            <div className="p-2 rounded-2xl bg-sky-50 text-sky-600">
+            <div className="p-2 rounded-2xl bg-orange-50 text-orange-600">
               <PieIcon className="w-5 h-5" />
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
             </div>
             <div className="h-8 w-px bg-slate-200" />
             <div className="text-center">
-              <span className="text-2xl font-black text-sky-600">
+              <span className="text-2xl font-black text-orange-600">
                 {sortedCategories.length}
               </span>
               <span className="text-[11px] text-slate-400 font-medium block">Categories</span>
@@ -250,7 +250,7 @@ export default function SpendCharts({ weeklyData, transactions, onFilterCategory
         <div className="mt-4 pt-3 border-t border-slate-100 text-center">
           <button
             onClick={onExploreAiInsights}
-            className="text-[11px] font-bold text-sky-600 hover:text-sky-700 cursor-pointer hover:underline transition-all"
+            className="text-[11px] font-bold text-orange-600 hover:text-orange-700 cursor-pointer hover:underline transition-all"
           >
             Explore Detailed AI Insights →
           </button>
