@@ -48,7 +48,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
     <div className="space-y-6">
       
       {/* Hero Smart Analyst Banner - Brand Orange Theme */}
-      <div className="bg-gradient-to-r from-sky-500 via-sky-400 to-blue-400 rounded-3xl p-6 text-white shadow-xl shadow-sky-400/20 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-6 text-white shadow-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -60,18 +60,18 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
             <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
               Smart Category Analyst
             </h2>
-            <p className="text-xs md:text-sm text-sky-100 max-w-xl mt-1">
+            <p className="text-xs md:text-sm text-orange-100 max-w-xl mt-1">
               Deep auto-categorization across Food 🍔, Travel ⛽, Medicine 💊, and Stationary 📚 from your UPI transactions.
             </p>
           </div>
 
           <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-right">
-            <span className="text-xs text-sky-100 font-medium block">Top Expense Category</span>
+            <span className="text-xs text-orange-100 font-medium block">Top Expense Category</span>
             <span className="text-xl font-black text-white flex items-center justify-end gap-1.5 mt-0.5">
               <span>{topCategory?.emoji}</span>
               <span>{topCategory?.name}</span>
             </span>
-            <span className="text-[11px] text-sky-100">
+            <span className="text-[11px] text-orange-100">
               ₹{topCategory?.total.toLocaleString('en-IN')} ({topCategory?.percentage}% of total)
             </span>
           </div>
@@ -81,7 +81,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
       {/* AI Smart Insights Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         
-        <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card">
+        <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card">
           <div className="flex items-center gap-2 mb-2 text-amber-600">
             <Lightbulb className="w-5 h-5" />
             <h4 className="text-xs font-bold uppercase tracking-wider">Canteen & Dining Insight</h4>
@@ -91,7 +91,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card">
+        <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card">
           <div className="flex items-center gap-2 mb-2 text-cyan-600">
             <TrendingDown className="w-5 h-5" />
             <h4 className="text-xs font-bold uppercase tracking-wider">Travel & Fuel Efficiency</h4>
@@ -101,7 +101,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-5 border border-[#EBE4D5] shadow-soft-card">
+        <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-soft-card">
           <div className="flex items-center gap-2 mb-2 text-indigo-600">
             <Target className="w-5 h-5" />
             <h4 className="text-xs font-bold uppercase tracking-wider">Stationary & Study</h4>
@@ -114,7 +114,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
       </div>
 
       {/* Grid of All Categories */}
-      <div className="bg-white rounded-3xl p-6 border border-[#EBE4D5] shadow-soft-card">
+      <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-soft-card">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-lg font-extrabold text-slate-800 tracking-tight">
@@ -138,8 +138,8 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
                 onClick={() => setSelectedCatKey(isSelected ? null : cat.key)}
                 className={`p-4 rounded-3xl border transition-all cursor-pointer ${
                   isSelected 
-                    ? 'border-sky-400 bg-sky-50/30 shadow-md ring-2 ring-sky-400/30' 
-                    : 'border-[#EBE4D5] hover:border-slate-300 bg-slate-50/50 hover:bg-white'
+                    ? 'border-orange-500 bg-orange-50/20 shadow-md ring-2 ring-orange-400/30' 
+                    : 'border-slate-200/80 hover:border-slate-300 bg-slate-50/50 hover:bg-white'
                 }`}
               >
                 <div className="flex items-start justify-between mb-3">
@@ -190,7 +190,7 @@ export default function SmartAnalyst({ transactions, monthlyLimit, totalSpent })
               </h4>
               <button 
                 onClick={() => setSelectedCatKey(null)}
-                className="text-xs text-sky-600 font-bold hover:underline"
+                className="text-xs text-orange-600 font-bold hover:underline"
               >
                 Close drill-down
               </button>

@@ -382,14 +382,14 @@ export default function App() {
           {/* TAB 3: QUICK PAY & NOTE TAGGER */}
           {activeTab === 'quickpay' && (
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-sky-500 via-sky-400 to-blue-400 rounded-3xl p-6 text-white shadow-xl shadow-sky-400/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-6 text-white shadow-xl flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-black">UPI Payment Hub & Immediate Note Tagging</h2>
-                  <p className="text-xs text-sky-100 mt-1">Make payments to merchants or friends and tag what it was for.</p>
+                  <p className="text-xs text-slate-300 mt-1">Make payments to merchants or friends and tag what it was for.</p>
                 </div>
                 <button
                   onClick={() => setIsQuickPayModalOpen(true)}
-                  className="px-4 py-2.5 rounded-xl bg-white text-sky-700 hover:bg-sky-50 font-bold text-xs shadow-md transition-all self-start sm:self-auto"
+                  className="px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 font-bold text-xs shadow-md"
                 >
                   + Launch UPI Pay Form
                 </button>
@@ -432,14 +432,14 @@ export default function App() {
           {/* TAB 6: SMS & BANK AUTO-SYNC SIMULATOR */}
           {activeTab === 'sms-sync' && (
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-sky-500 via-sky-400 to-blue-400 rounded-3xl p-6 text-white shadow-xl shadow-sky-400/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-3xl p-6 text-white shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                   <h2 className="text-2xl font-black">Direct SMS & Bank Sync Center</h2>
-                  <p className="text-xs text-sky-100 mt-1">Simulates reading incoming bank SMS notifications and auto-creating transactions.</p>
+                  <p className="text-xs text-orange-100 mt-1">Simulates reading incoming bank SMS notifications and auto-creating transactions.</p>
                 </div>
                 <button
                   onClick={() => setIsSmsSyncModalOpen(true)}
-                  className="px-4 py-2.5 rounded-xl bg-white text-sky-700 hover:bg-sky-50 font-bold text-xs shadow-md transition-all self-start sm:self-auto"
+                  className="px-4 py-2.5 rounded-xl bg-white text-orange-600 hover:bg-orange-50 font-bold text-xs shadow-md"
                 >
                   Open SMS Sync Console
                 </button>
@@ -453,6 +453,18 @@ export default function App() {
                 setCategoryFilter={setCategoryFilter}
               />
             </div>
+          )}
+
+          {/* TAB 7: THEME & COLOR CUSTOMIZER */}
+          {activeTab === 'themes' && (
+            <ThemeCustomizerView 
+              currentThemeId={currentThemeId}
+              onSelectTheme={handleSelectTheme}
+              isDarkMode={isDarkMode}
+              onToggleDarkMode={handleToggleDarkMode}
+              customPrimary={customPrimary}
+              onUpdateCustomPrimary={handleUpdateCustomPrimary}
+            />
           )}
 
         </main>
