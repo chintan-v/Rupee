@@ -125,22 +125,22 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-200">
+      <div className="bg-[#FDFCF9] w-full max-w-lg rounded-3xl shadow-2xl border border-[#EBE4D5] overflow-hidden animate-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center justify-between">
+        <div className="px-6 py-5 bg-gradient-to-r from-sky-500 to-sky-400 text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 bg-white/10 rounded-xl backdrop-blur-md">
-              <Send className="w-5 h-5 text-sky-400" />
+            <div className="p-2 bg-white/20 rounded-xl backdrop-blur-md">
+              <Send className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="font-extrabold text-lg tracking-tight">Pay via UPI & Add Note 💸</h3>
-              <p className="text-xs text-slate-400">Specify transaction purpose before or after payment</p>
+              <p className="text-xs text-sky-100">Specify transaction purpose before or after payment</p>
             </div>
           </div>
           <button 
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-white/10 transition-colors text-slate-300 hover:text-white"
+            className="p-1.5 rounded-full hover:bg-white/20 transition-colors text-white"
           >
             <X className="w-5 h-5" />
           </button>
@@ -234,7 +234,7 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                   type="checkbox"
                   checked={addNoteLater}
                   onChange={(e) => setAddNoteLater(e.target.checked)}
-                  className="rounded text-orange-600 focus:ring-sky-400"
+                  className="rounded text-sky-600 focus:ring-sky-400 accent-sky-500"
                 />
                 <span>Add note after payment</span>
               </label>
@@ -269,21 +269,21 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
                 />
               </div>
             ) : (
-              <div className="p-3 bg-white rounded-xl border border-amber-200 text-xs space-y-2">
-                <div className="flex items-start gap-2 text-amber-800">
-                  <Clock className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="p-3 bg-white rounded-xl border border-sky-200 text-xs space-y-2">
+                <div className="flex items-start gap-2 text-sky-900">
+                  <Clock className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
                   <p>
                     <strong>3-4h Auto-Reminder Activated:</strong> The bank will record the recipient as <em>{accountHolder}</em>. If not tagged within 3-4 hours, RupRad will ask you what you spent it on.
                   </p>
                 </div>
                 
                 {/* Simulation helper checkbox */}
-                <label className="flex items-center gap-2 pt-1.5 border-t border-amber-100 text-[11px] text-amber-900 font-bold cursor-pointer">
+                <label className="flex items-center gap-2 pt-1.5 border-t border-sky-100 text-[11px] text-sky-900 font-bold cursor-pointer">
                   <input
                     type="checkbox"
                     checked={simulate3hAgo}
                     onChange={(e) => setSimulate3hAgo(e.target.checked)}
-                    className="rounded text-amber-600 focus:ring-amber-500"
+                    className="rounded text-sky-600 focus:ring-sky-400 accent-sky-500"
                   />
                   <span>⚡ Simulate "Paid 3.5h ago" (Triggers 3-4h reminder banner immediately for demo!)</span>
                 </label>
@@ -294,9 +294,9 @@ export default function QuickPayModal({ isOpen, onClose, onMakePayment }) {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 active:scale-[0.99] text-white font-extrabold text-sm shadow-xl shadow-slate-900/20 flex items-center justify-center gap-2 transition-all"
+            className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 active:scale-[0.99] text-white font-extrabold text-sm shadow-xl shadow-sky-400/25 flex items-center justify-center gap-2 transition-all"
           >
-            <Send className="w-4 h-4 text-sky-400" />
+            <Send className="w-4 h-4 text-white" />
             <span>Complete UPI Payment of ₹{amount}</span>
           </button>
 

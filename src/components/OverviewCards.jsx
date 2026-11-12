@@ -167,7 +167,7 @@ export default function OverviewCards({
 
         <button 
           onClick={onOpenSplitz}
-          className="mt-2 w-full text-center text-xs font-bold text-orange-600 hover:text-orange-700 pt-1 block"
+          className="mt-2 w-full text-center text-xs font-bold text-sky-600 hover:text-sky-700 pt-1 block"
         >
           View active campus splits →
         </button>
@@ -218,7 +218,7 @@ export default function OverviewCards({
 
         <div className="mt-2 text-[11px] text-slate-500 flex items-center justify-between">
           <span>Tap to adjust limit</span>
-          <span className="font-bold text-slate-600 group-hover:text-orange-600">Settings ⚙️</span>
+          <span className="font-bold text-slate-600 group-hover:text-sky-600">Settings ⚙️</span>
         </div>
       </div>
 

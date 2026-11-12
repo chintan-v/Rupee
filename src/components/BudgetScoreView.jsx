@@ -171,10 +171,10 @@ export default function BudgetScoreView({
 
                 {/* Positive */}
                 <div className={`p-3 rounded-2xl border text-center transition-all ${
-                  previewScore >= 70 ? 'bg-orange-50 border-orange-300 ring-2 ring-orange-400/30' : 'bg-slate-50 border-slate-200'
+                  previewScore >= 70 ? 'bg-sky-50 border-sky-300 ring-2 ring-sky-400/30' : 'bg-slate-50 border-slate-200'
                 }`}>
                   <span className="text-xl">🌟</span>
-                  <span className="text-xs font-extrabold block text-orange-700 mt-1">Healthy</span>
+                  <span className="text-xs font-extrabold block text-sky-700 mt-1">Healthy</span>
                   <span className="text-[10px] text-slate-400">70 - 100 pts</span>
                 </div>
               </div>

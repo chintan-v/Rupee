@@ -110,7 +110,7 @@ export default function Sidebar({
             <div className="w-full flex items-center justify-center relative">
               <div 
                 onClick={() => setIsExpanded(true)}
-                className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center text-white shadow-md shadow-orange-500/20 shrink-0 font-bold text-lg cursor-pointer hover:scale-105 transition-transform select-none"
+                className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-sky-400 to-sky-500 flex items-center justify-center text-white shadow-md shadow-sky-400/25 shrink-0 font-bold text-lg cursor-pointer hover:scale-105 transition-transform select-none"
                 title="Click to expand sidebar"
               >
                 ₹
@@ -335,7 +335,7 @@ export default function Sidebar({
             <img 
               src={user?.avatar || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80"} 
               alt="Avatar" 
-              className="w-8 h-8 rounded-xl object-cover ring-2 ring-orange-500/30 group-hover:ring-orange-500 group-hover:scale-105 transition-all shadow-sm" 
+              className="w-8 h-8 rounded-xl object-cover ring-2 ring-sky-400/30 group-hover:ring-sky-400 group-hover:scale-105 transition-all shadow-sm" 
             />
           </button>
         )}
